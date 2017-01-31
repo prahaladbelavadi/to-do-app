@@ -9,7 +9,9 @@ li{
 }.header{
   text-align: center;
 }
-
+.navbar-header{
+  text-align: center;
+}
 
 #submit_button{
 
