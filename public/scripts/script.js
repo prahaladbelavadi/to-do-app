@@ -12,8 +12,8 @@ $(document).ready(function() {
    $('button').click(function() {
        $(this).toggle(1000);
    });
-   $('.btn-success').on("Click", function(){
-     $('#first-container').html("<h1>What have you achieved today ?<h1>");
+   $('button .btn-success').on("Click", function(){
+// Not Working    //  $('#first-container').html("<h1>What have you achieved today ?<h1>");
    });
 
 
