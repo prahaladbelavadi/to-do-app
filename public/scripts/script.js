@@ -12,8 +12,21 @@ $(document).ready(function() {
    $('button').click(function() {
        $(this).toggle(1000);
    });
-   $('button .btn-success').on("Click", function(){
-// Not Working    //  $('#first-container').html("<h1>What have you achieved today ?<h1>");
+   $(".success").hover(function(){
+    alert("You entered p1!");
+},
+function(){
+    alert("Bye! You now leave p1!");
+});
+
+
+
+   $('.btn-success').on("Click", function(){
+     $('.success').click(function(){
+       $('.hidden').addClass('visible');
+       $('.hidden').removeClass('hidden');
+     })
+   // Not Working    //  $('#first-container').html("<h1>What have you achieved today ?<h1>");
    });
 
 

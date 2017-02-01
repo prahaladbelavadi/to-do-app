@@ -29,25 +29,37 @@
         <button type="button" name="button" class="btn btn-primary bg-primary col-xs-12 col-md-12 col-sm-12 col-lg-12">#THOS</button>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            <button type="button" name="button" class="btn btn-danger bg-danger col-xs-12 col-md-12 col-sm-12 col-lg-12">Failure</button>
+        <button type="button" name="button" class="btn btn-danger bg-danger col-xs-12 col-md-12 col-sm-12 col-lg-12">Failure</button>
       </div>
     </div>
   </div>
-
 </div>
-<!-- First Container contains messages/Questions that demand a response. -->
-<div class="container-fluid">
-  <div class="jumbotron">
-    <div class="container-fluid">
-        <div class="jumbotron">
+<!-- End of Navbar -->
+<!-- Single container for Question and response; Divs to be hidden and shown according to click of navbar button -->
+    <div class="jumbotron">
+      <div class="container-fluid">
           <div class="col-sm-offset-2 col-sm-10 col-md-offset-2 col-md-10 col-lg-offset-2 col-lg-10 col-xs-offset-2 col-xs-10" id="first-container">
-            <h1>Hello There</h1>
+            <!-- First Container contains messages/Questions that demand a response. -->
+
+            <div class="success-question-div col-lg-offset-2">
+                <h3>You're awesome!</h3>
+                <h2>What have <strong>you</strong> <b>achieved</b> today ?</h2>
+            </div>
+            <!-- Second Container contains option to input data to the question accordingly -->
+            <hr>
+            <div class="success-input-div form-group">
+              <label for="success-label">Success:</label>
+              <input type="text" name="success-input" class="form-control" value="">
+              <br>
+              <label for="success-insight-label">Insight:</label>
+              <input type="text" name="success-insight-input" class="form-control" value="">
+              <br>
+              <button type="submit_button" name="submit_button" class="btn btn-success col-xs-10 col-md-10 col-sm-10 col-lg-10 "><strong>I'm Proud of what I did.</strong></button>
+
+            </div>
           </div>
         </div>
     </div>
-  </div>
-</div>
-<!-- Second Container contains option to input data to the question accordingly -->
 
 
 <!-- Third Container contains option to share on desired social media, by default, all of them are selected by default -->

@@ -1,9 +1,13 @@
 h2 {
 
 }
-body{
 
-}
+  body {
+          background-color: #076ACE
+  }.success-question-div{
+    
+  }
+
 li{
   text-align: center;;
 }.header{
@@ -13,9 +17,7 @@ li{
   text-align: center;
 }
 
-#submit_button{
 
-}
 /*Bootstrap Additions*/
 
 
