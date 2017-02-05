@@ -22,15 +22,15 @@
 <br>
 <div class="container">
   <div class="jumbotron">
-    <div class="row panel panel-default">
+    <div class="row ">
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         <button type="button" id="success-button" class="btn btn-success col-xs-12 col-md-12 col-sm-12 col-lg-12">Success</button>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-        <button type="button" name="button" class="btn btn-primary bg-primary col-xs-12 col-md-12 col-sm-12 col-lg-12">#THOS</button>
+        <button type="button" name="thos-button" class="btn btn-primary bg-primary col-xs-12 col-md-12 col-sm-12 col-lg-12">#THOS</button>
       </div>
-      <div class="col-lg-4 c1ol-md-4 col-sm-4 col-xs-4">
-        <button type="button" name="button" class="btn btn-danger bg-danger col-xs-12 col-md-12 col-sm-12 col-lg-12">Failure</button>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <button type="button" name="failure-button" class="btn btn-danger bg-danger col-xs-12 col-md-12 col-sm-12 col-lg-12">Failure</button>
       </div>
     </div>
   </div>
@@ -40,8 +40,53 @@
     <div class="jumbotron">
       <div class="container-fluid">
           <div class="col-sm-offset-2 col-sm-10 col-md-offset-2 col-md-10 col-lg-offset-2 col-lg-10 col-xs-offset-2 col-xs-10" id="first-container">
+            <!-- #THOS main Introductory section  -->
+
+            <!--  -->
+                        <div id="thos-div" class="visible">
+                          <div id="thos-welcome-div" class="col-lg-offset-2 col-xs-offset-2 col-md-offset-2 col-sm-offset-2">
+                              <!-- display -->
+                              <h1>Hello there!</h1>
+                              <!-- Introduction -->
+                              <div class="col-lg-8 col-xs-8 col-sm-8 col-md-8">
+                                <p>We're helping you document your steps to <strong>Greatness</strong> to keep you <strong>Motivated</strong>!</p>
+                                <div class="col-lg-offset-4 col-xs-offset-4 col-md-offset-4 col-sm-offset-4">
+                                  <h3><em> <b>Lets do it!</b></em></h3>
+                                </div>
+                              </div>
+                              <!--  -->
+                          </div>
+                        <!-- Second Container contains option to input data to the question accordingly -->
+                        <hr>
+
+                        <div id="thos-option-div" class="form-group col-lg-8 col-xs-8 col-sm-8 col-md-8">
+                          <label for="name-input">What's your name ?</label>
+                          <input type="text" name="thos-input" class="form-control" value="">
+                          <br>
+                          <h4><em>Did you achieve or fail at your last venture ?</em></h4>
+                          <div class="btn-group">
+                            <div class="col-lg-6">
+                              <button type="button" class="btn btn-success">
+                                I succeeded
+                              </button>
+                            </div>
+                            <div class="col-lg-6">
+                            <button type="button" class="btn btn-danger">
+                              I Failed
+                            </button>
+                          </div>
+                        </div>
+                          <br>
+                          <!-- Third Container contains option to share on desired social media, by default, all of them are selected by default -->
+                          <!-- That you started using this application -->
+                    </div>
+                    </div>
+
+
+            <!-- End of thos introduction section -->
             <!-- First Container contains messages/Questions that demand a response. -->
-            <div id="success-div" class="visible">
+<!-- success-question-div -->
+            <div id="success-div" class="hide">
               <div id="success-question-div" class="col-lg-offset-2 col-xs-offset-2 col-md-offset-2 col-sm-offset-2 ">
                   <h3>You're awesome!</h3>
                   <h2>What have <strong>you</strong> <b>achieved</b> today ?</h2>
@@ -61,8 +106,9 @@
 
             </div>
           </div>
-        </div>
-        </div>
+
+
+        <!-- end of first-container -->
     </div>
 
 
@@ -84,7 +130,13 @@
 $(document).ready(function(){
 
   $("#success-button").click(function(){
-    $("#success-div").hide();
+    $("#success-div").removeClass('hide');
+    $("thos-div").addClass('hide');
+    $()
+  });
+  $("#thos-button").click(function(){
+    $("#thos-div").addClass('hide');
+    $("#thos-div").removeClass('visible');
   });
 });
 
@@ -95,29 +147,3 @@ $(document).ready(function(){
 <!--  -->
 <!--  -->
 <!--  -->
-
-
-<input id = "questionbutton" type = "button" value = "Question" />
-<input id = "answerbutton" type = "button" value = "Answer" />
-
-
-
-
-<div id="qid" class="question">
-                what is your name ?
-</div>
-<div id="aid" class="answer">
-                <input type="text" name="" value="">
-</div>
-<script type="text/javascript">
-$("#questionbutton").click(function () {
-             $("#aid").hide(  );
-             $("#qid").show(  );
-          });
-
-$("#answerbutton").click(function () {
-             $("#qid").hide(  );
-             $("#aid").show(  );
-
-          });
-</script>

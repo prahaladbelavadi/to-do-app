@@ -5,7 +5,7 @@ h2 {
   body {
           background-color: #076ACE
   }.success-question-div{
-    
+
   }
 
 li{
@@ -16,33 +16,3 @@ li{
 .navbar-header{
   text-align: center;
 }
-
-
-/*Bootstrap Additions*/
-
-
-
-/*End of Bootstrap Additions*/
-
-/*
-form {
-    display: inline-block;
-}
-
-#button{
-    display: inline-block;
-    height:20px;
-	width:70px;
-	background-color:#cc0000;
-	font-family:arial;
-	font-weight:bold;
-	color:#ffffff;
-	border-radius: 5px;
-	text-align:center;
-	margin-top:2px;
-}
-
-.list {
-	font-family:garamond;
-	color:#cc0000;
-  }*/
